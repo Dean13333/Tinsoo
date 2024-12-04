@@ -1,0 +1,171 @@
+openapi: 3.0.0
+info:
+  title: Tinsoo API
+  description: Tinsoo
+  version: "1.0.0"
+servers:
+  - url: http://54.166.77.150:5000
+paths:
+  /register:
+    post:
+      summary: 註冊新使用者
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: "user@example.com"
+                password:
+                  type: string
+                  example: "password123"
+      responses:
+        '201':
+          description: 註冊成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "註冊成功！您的 UserID 是："
+                  user_id:
+                    type: string
+                    example: "123e4567-e89b-12d3-a456-426614174000"
+        '500':
+          description: 伺服器錯誤
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal Server Error"
+  /login:
+    post:
+      summary: 使用者登入
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: "user@example.com"
+                password:
+                  type: string
+                  example: "password123"
+      responses:
+        '200':
+          description: 登入成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "登入成功！"
+        '401':
+          description: 密碼錯誤
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "密碼錯誤！"
+        '404':
+          description: 找不到此帳號
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "找不到此帳號！"
+        '500':
+          description: 伺服器錯誤
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal Server Error"
+  /import_pdf:
+    post:
+      summary: 匯入 PDF 文件到 books_file 表
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                book_id:
+                  type: string
+                  example: "123e4567-e89b-12d3-a456-426614174000"
+                pdf_path:
+                  type: string
+                  example: "/path/to/your/file.pdf"
+      responses:
+        '201':
+          description: PDF 文件匯入成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "PDF 文件 'file.pdf' 已成功匯入到 books_file 表中。"
+        '500':
+          description: 伺服器錯誤
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal Server Error"
+  /users:
+    get:
+      summary: 獲取所有使用者列表
+      responses:
+        '200':
+          description: 成功取得使用者列表
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                      example: "user@example.com"
+                    password_hash:
+                      type: string
+                      example: "$2b$12$XXXXXXXXXXXXXXXXXXXXXXXXX"
+        '500':
+          description: 伺服器錯誤
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal Server Error"

@@ -1,0 +1,127 @@
+nohup: ignoring input
+ * Serving Flask app 'usersystemAPI'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.93.177:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 110-855-709
+219.71.214.82 - - [01/Dec/2024 20:23:29] "GET /swagger/ HTTP/1.1" 200 -
+219.71.214.82 - - [01/Dec/2024 20:23:29] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+219.71.214.82 - - [01/Dec/2024 20:23:29] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+219.71.214.82 - - [01/Dec/2024 20:23:29] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+219.71.214.82 - - [01/Dec/2024 20:23:29] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+219.71.214.82 - - [01/Dec/2024 20:23:32] "[36mGET /static/swagger.yaml HTTP/1.1[0m" 304 -
+44.196.175.104 - - [01/Dec/2024 20:23:32] "GET /static/swagger.yaml HTTP/1.1" 200 -
+195.144.21.56 - - [02/Dec/2024 03:54:23] "[33mGET / HTTP/1.1[0m" 404 -
+195.144.21.56 - - [02/Dec/2024 03:54:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+205.210.31.152 - - [02/Dec/2024 04:58:21] "[33mGET / HTTP/1.0[0m" 404 -
+/home/ubuntu/NTUST-Topics-develop/usersystemAPI.py:92: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "exp": datetime.utcnow() + timedelta(hours=1)  # Token 有效期 1 小時
+140.118.142.75 - - [02/Dec/2024 06:34:48] "POST /login HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:34:49] "GET /showbooks HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:34:59] "GET /search_book?book_name=哈 HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:35:00] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:35:01] "[33mGET /book/undefined/cover HTTP/1.1[0m" 404 -
+140.118.142.75 - - [02/Dec/2024 06:35:18] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:35:18] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:38:24] "GET /search_book?book_name=哈 HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:39:02] "POST /login HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:39:03] "GET /showbooks HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:42:55] "GET /search_book?book_name=哈 HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:42:56] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:42:57] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:43:03] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:47:15] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:47:15] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:47:23] "GET /search_book?book_name=哈 HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:47:23] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:47:24] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:47:24] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:47:29] "GET /search_book?book_name=哈 HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:47:29] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:47:31] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:47:31] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:48:46] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:48:46] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:48:54] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:48:54] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:49:32] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:49:50] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:50:04] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:50:16] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:50:16] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:50:31] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:50:31] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:54:55] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:54:55] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:55:04] "GET /search_book?book_name=哈 HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:55:04] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:55:05] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 06:55:05] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 07:05:01] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 07:05:01] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 07:06:59] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.200.45 - - [02/Dec/2024 07:37:30] "[31m[1mGET /profile HTTP/1.1[0m" 401 -
+140.118.200.45 - - [02/Dec/2024 07:37:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+205.210.31.185 - - [02/Dec/2024 08:18:24] "[33mGET / HTTP/1.1[0m" 404 -
+74.82.47.2 - - [02/Dec/2024 09:03:17] "[33mGET / HTTP/1.1[0m" 404 -
+74.82.47.2 - - [02/Dec/2024 09:03:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+140.118.142.75 - - [02/Dec/2024 09:05:45] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:05:45] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:06:18] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:06:21] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:06:44] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:07:07] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:07:31] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:07:35] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:07:40] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:07:59] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:08:07] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:08:17] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:08:23] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:08:30] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:08:52] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:09:00] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:09:07] "GET /Getaudio/4 HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:09:11] "GET /Getaudio/1 HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:09:13] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:09:13] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:10:00] "GET /Getaudio/1 HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:11:49] "GET /Getaudio/2 HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:12:11] "GET /Getaudio/1 HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:14:51] "[33mPOST /login HTTP/1.1[0m" 404 -
+140.118.142.75 - - [02/Dec/2024 09:14:58] "POST /login HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:14:59] "GET /showbooks HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:15:02] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:15:02] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:15:03] "GET /Getaudio/1 HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:15:15] "GET /Getaudio/2 HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:15:34] "GET /Getaudio/3 HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:15:54] "GET /book/2/audios HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:15:54] "GET /book/2/cover HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:16:02] "GET /Getaudio/1 HTTP/1.1" 200 -
+140.118.142.75 - - [02/Dec/2024 09:16:10] "GET /Getaudio/3 HTTP/1.1" 200 -
+27.240.161.91 - - [02/Dec/2024 14:02:03] "GET /swagger/ HTTP/1.1" 200 -
+27.240.161.91 - - [02/Dec/2024 14:02:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+27.240.161.91 - - [02/Dec/2024 14:02:04] "GET /swagger/index.css HTTP/1.1" 200 -
+27.240.161.91 - - [02/Dec/2024 14:02:04] "GET /swagger/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+27.240.161.91 - - [02/Dec/2024 14:02:04] "GET /swagger/swagger-ui.css HTTP/1.1" 200 -
+27.240.161.91 - - [02/Dec/2024 14:02:04] "GET /swagger/swagger-ui-bundle.js HTTP/1.1" 200 -
+219.71.214.82 - - [02/Dec/2024 14:02:34] "[31m[1mGET /profile HTTP/1.1[0m" 401 -
+27.240.161.91 - - [02/Dec/2024 14:02:36] "[31m[1mGET /profile HTTP/1.1[0m" 401 -
+27.240.161.91 - - [02/Dec/2024 14:02:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+27.240.161.91 - - [02/Dec/2024 14:05:59] "POST /login HTTP/1.1" 200 -
+27.240.161.91 - - [02/Dec/2024 14:06:00] "GET /showbooks HTTP/1.1" 200 -
+27.240.161.91 - - [02/Dec/2024 14:06:07] "POST /login HTTP/1.1" 200 -
+27.240.161.91 - - [02/Dec/2024 14:06:08] "GET /showbooks HTTP/1.1" 200 -
+27.240.161.91 - - [02/Dec/2024 14:14:59] "POST /login HTTP/1.1" 200 -
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              27.240.161.91 - - [02/Dec/2024 14:30:52] "POST /login HTTP/1.1" 200 -
+27.240.161.91 - - [02/Dec/2024 14:31:22] "POST /login HTTP/1.1" 200 -
+27.240.161.91 - - [02/Dec/2024 14:34:27] "POST /login HTTP/1.1" 200 -
+27.240.161.91 - - [02/Dec/2024 14:48:15] "POST /login HTTP/1.1" 200 -
+27.240.161.91 - - [02/Dec/2024 14:48:16] "GET /showbooks HTTP/1.1" 200 -

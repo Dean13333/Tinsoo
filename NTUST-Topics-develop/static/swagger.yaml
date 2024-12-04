@@ -1,0 +1,238 @@
+openapi: 3.0.0
+info:
+  title: Tinsoo API
+  description: 
+  version: 1.0.0
+servers:
+  - url: http://3.92.132.188:5000
+    description: 
+
+paths:
+  /register:
+    post:
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: user@example.com
+                password:
+                  type: string
+                  example: userpassword
+      responses:
+        '201':
+          description: User registered successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  user_id:
+                    type: string
+        '500':
+          description: Server error
+
+  /login:
+    post:
+      summary: User login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: user@example.com
+                password:
+                  type: string
+                  example: userpassword
+      responses:
+        '200':
+          description: Login successful
+        '401':
+          description: Incorrect password
+        '404':
+          description: User not found
+        '500':
+          description: Server error
+
+  /import_pdf:
+    post:
+      summary: Upload a book and its PDF and cover image
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                book_name:
+                  type: string
+                  example: 西遊記
+                writer:
+                  type: string
+                  example: 吳承恩
+                publishing:
+                  type: string
+                  example: ABC 出版社
+                description:
+                  type: string
+                  example: 西遊記是中國古代四大名著之一
+                pdf_path:
+                  type: string
+                  example: C:/path/to/book.pdf
+                cover_image_path:
+                  type: string
+                  example: C:/path/to/cover.jpg
+      responses:
+        '201':
+          description: Book, PDF, and cover image uploaded successfully
+        '400':
+          description: Invalid input
+        '404':
+          description: File not found
+        '500':
+          description: Server error
+
+  /book/{book_id}/pdf:
+    get:
+      summary: View the PDF of a specific book
+      parameters:
+        - in: path
+          name: book_id
+          schema:
+            type: integer
+          required: true
+          description: The ID of the book
+      responses:
+        '200':
+          description: PDF displayed
+          content:
+            application/pdf: {}
+        '404':
+          description: Book or PDF not found
+        '500':
+          description: Server error
+
+  /book/{book_id}/cover:
+    get:
+      summary: View the cover image of a specific book
+      parameters:
+        - in: path
+          name: book_id
+          schema:
+            type: integer
+          required: true
+          description: The ID of the book
+      responses:
+        '200':
+          description: Cover image displayed
+          content:
+            image/jpeg: {}
+        '404':
+          description: Book or cover image not found
+        '500':
+          description: Server error
+
+  /search_book?book_name={book_name}:
+    get:
+      summary: Search for books by name
+      parameters:
+        - in: query
+          name: book_name
+          schema:
+            type: string
+          required: true
+          description: The name of the book to search for
+      responses:
+        '200':
+          description: Books found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    book_id:
+                      type: integer
+                    book_name:
+                      type: string
+                    writer:
+                      type: string
+                    publishing:
+                      type: string
+                    description:
+                      type: string
+        '404':
+          description: No books found
+        '500':
+          description: Server error
+
+  /users:
+    get:
+      summary: Get all users
+      responses:
+        '200':
+          description: List of users
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                    password_hash:
+                      type: string
+        '500':
+          description: Server error
+
+  /showbooks:
+    get:
+      summary: Get a list of all books
+      description: Returns a list of books with their IDs, names, and cover images in Base64 format.
+      tags:
+        - Books
+      responses:
+        200:
+          description: A list of books
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    book_id:
+                      type: integer
+                      description: The unique ID of the book
+                      example: 1
+                    book_name:
+                      type: string
+                      description: The name of the book
+                      example: "The Great Gatsby"
+                    cover_image:
+                      type: string
+                      description: The Base64-encoded cover image of the book
+                      example: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAA..."
+        500:
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal server error occurred"
